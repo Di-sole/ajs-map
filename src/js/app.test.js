@@ -9,5 +9,5 @@ test('получение текста ошибки по ее коду', () => {
 test('неизвестный код ошибки', () => {
   const errorRepository = new ErrorRepository();
 
-  expect(() => errorRepository.translate(202)).toThrowError(new Error('Unknown error'));
+  expect(errorRepository.translate(202)).toBe('Unknown error');
 });

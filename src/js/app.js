@@ -11,7 +11,7 @@ export default class ErrorRepository {
 
   translate(code) {
     if (!this.errors.has(code)) {
-      throw new Error('Unknown error');
+      return 'Unknown error';
     }
 
     return this.errors.get(code);
